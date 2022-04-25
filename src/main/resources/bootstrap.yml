@@ -1,6 +1,3 @@
-spring:
-  application:
-    name: api-gateway-service
 #  cloud:
 #    config:
 #      enabled: true
@@ -15,3 +12,62 @@ eureka:
     register-with-eureka: true
   instance:
     hostname: localhost
+spring:
+  application:
+    name: api-gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: account-service
+        uri: lb://account-service
+        predicates:
+        - Path=/account/**
+        
+      - id: configuration-service
+        uri: lb://configuration-service
+        predicates:
+        - Path=/configuration/**
+
+      - id: credit-service
+        uri: lb://credit-service
+        predicates:
+        - Path=/credit/**
+
+      - id: customer-service
+        uri: lb://customer-service
+        predicates:
+        - Path=/customer/**
+
+      - id: holder-account-service
+        uri: lb://holder-account-service
+        predicates:
+        - Path=/holder-account/**
+
+      - id: movement-account-service
+        uri: lb://movement-account-service
+        predicates:
+        - Path=/movement-account/**
+
+      - id: movementCredit-service
+        uri: lb://movementCredit-service
+        predicates:
+        - Path=/movementCredit/**
+
+      - id: product-service
+        uri: lb://product-service/
+        predicates:
+        - Path=/product/**
+
+      - id: SignCustAccount-service
+        uri: lb://SignCustAccount-service
+        predicates:
+        - Path=/signCustAccount/**
+
+      - id: TableId-service
+        uri: lb://TableId-service/
+        predicates:
+        - Path=/tableid/**
+
