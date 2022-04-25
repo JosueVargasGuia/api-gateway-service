@@ -14,4 +14,4 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
   instance:
-    hostname: localhost1
+    hostname: localhost
