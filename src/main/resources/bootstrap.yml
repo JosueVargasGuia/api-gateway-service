@@ -71,3 +71,12 @@ spring:
         predicates:
         - Path=/tableid/**
 
+      - id: card-service
+        uri: lb://card-service/
+        predicates:
+        - Path=/card/**
+        
+      - id: bank-transfers-service
+        uri: lb://bank-transfers-service/
+        predicates:
+        - Path=/bank-transfer/**
