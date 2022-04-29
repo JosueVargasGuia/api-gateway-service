@@ -75,4 +75,9 @@ spring:
         uri: lb://reports-account-service
         predicates:
         - Path=/reports/**
+      
+      - id: card-service
+        uri: lb://card-service
+        predicates:
+        - Path=/card/**
 
