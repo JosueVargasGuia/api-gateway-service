@@ -70,6 +70,16 @@ spring:
         uri: lb://TableId-service/
         predicates:
         - Path=/tableid/**
+      
+      - id: reports-account-service
+        uri: lb://reports-account-service
+        predicates:
+        - Path=/reports/**
+      
+      - id: card-service
+        uri: lb://card-service
+        predicates:
+        - Path=/card/**
 
       - id: card-service
         uri: lb://card-service/
