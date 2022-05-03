@@ -90,3 +90,13 @@ spring:
         uri: lb://bank-transfers-service/
         predicates:
         - Path=/bank-transfer/**
+      
+      - id: account-card-service
+        uri: lb://account-card-service/
+        predicates:
+        - Path=/accountcard/**
+
+      - id: movement-card-service
+        uri: lb://movement-card-service/
+        predicates:
+        - Path=/movement-card/**
