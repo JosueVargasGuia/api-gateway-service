@@ -101,4 +101,13 @@ spring:
         uri: lb://movement-card-service/
         predicates:
         - Path=/movement-card/**
-
+        
+      - id: wallet-service
+        uri: lb://wallet-service/
+        predicates:
+        - Path=/api/v1/wallet/**
+        
+      - id: movement-wallet-service
+        uri: lb://movement-wallet-service/
+        predicates:
+        - Path=/api/v1/movement-wallet/**
