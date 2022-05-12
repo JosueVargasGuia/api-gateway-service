@@ -111,6 +111,21 @@ spring:
         uri: lb://movement-wallet-service/
         predicates:
         - Path=/api/v1/movement-wallet/**
+        
+      - id: purchase-request-service
+        uri: lb://purchase-request-service/
+        predicates:
+        - Path=/api/v1/purchaserequest/**
+
+      - id: purchase-transaction-service
+        uri: lb://purchase-transaction-service/
+        predicates:
+        - Path=/api/v1/purchasetransaction/**
+      
+      - id: exchange-rate-service
+        uri: lb://exchange-rate-service/
+        predicates:
+        - Path=/api/v1/exchangerate/**
 logging:
   file:
     name: log/${spring.application.name}.log   
