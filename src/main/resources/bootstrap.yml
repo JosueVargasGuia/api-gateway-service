@@ -121,3 +121,8 @@ spring:
         uri: lb://movement-wallet-bootcoin-service/
         predicates:
         - Path=/api/v1/movement-wallet-bootcoin/**
+        
+      - id: bank-rate-bootcoin-service
+        uri: lb://bank-rate-bootcoin-service/
+        predicates:
+        - Path=/api/v1/bank/rate/**
