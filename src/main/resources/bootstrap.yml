@@ -115,7 +115,7 @@ spring:
       - id: wallet-bootcoin-service
         uri: lb://wallet-bootcoin-service/
         predicates:
-        - Path=/api/v1/wallet/bootcoin/**
+        - Path=/api/v1/bootcoin/**
         
       - id: movement-wallet-bootcoin-service
         uri: lb://movement-wallet-bootcoin-service/
